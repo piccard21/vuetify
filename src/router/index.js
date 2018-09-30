@@ -1,33 +1,33 @@
 import Vue from 'vue'
-import Router from 'vue-router' 
-import HelloWorld from '@/components/HelloWorld'
-import TestMe from '@/components/TestMe'
-import TestMe2 from '@/components/TestMe2'
-import TestMe3 from '@/components/TestMe3'
+import Router from 'vue-router'
+import Contacts from '@/components/Contacts'
+import Faq from '@/components/Faq'
+import Duplicates from '@/components/Duplicates'
+import Settings from '@/components/Settings'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/hello',
-      name: 'hello',
-      component: HelloWorld
+      path: '/contacts',
+      name: 'contacts',
+      component: Contacts
     },
     {
-      path: '/testme',
-      name: 'testme',
-      component: TestMe
+      path: '/faq',
+      name: 'faq',
+      component: Faq
     },
     {
-      path: '/testme2',
-      name: 'testme2',
-      component: TestMe2
+      path: '/duplicates',
+      name: 'duplicates',
+      component: Duplicates
     },
     {
-      path: '/testme3',
-      name: 'testme3',
-      component: TestMe3
+      path: '/settings',
+      name: 'settings',
+      component: Settings
     }
   ],
   mode: 'history'

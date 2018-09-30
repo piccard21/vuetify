@@ -203,14 +203,23 @@
 </template>
 
 <script>
+  import drawer from 'components/layout/Drawer'
+  import toolbar from 'components/layout/Toolbar'
+  import dialog from 'components/layout/Dialog'
+
   export default {
+    components: {
+      drawer,
+      toolbar,
+      dialog
+    },
     data: () => ({
       dialog: false,
       drawer: null,
       items: [
-        { icon: 'contacts', text: 'Contacts', url: 'hello' },
-        { icon: 'history', text: 'Frequently contacted', url: 'testme' },
-        { icon: 'content_copy', text: 'Duplicates', url: 'testme2' },
+        { icon: 'contacts', text: 'Contacts', url: 'contacts' },
+        { icon: 'history', text: 'Faq', url: 'faq' },
+        { icon: 'content_copy', text: 'Duplicates', url: 'duplicates' },
         {
           icon: 'keyboard_arrow_up',
           'icon-alt': 'keyboard_arrow_down',
@@ -233,7 +242,7 @@
             { text: 'Other contacts' }
           ]
         },
-        { icon: 'settings', text: 'Settings' },
+        { icon: 'settings', text: 'Settings', url: 'settings' },
         { icon: 'chat_bubble', text: 'Send feedback' },
         { icon: 'help', text: 'Help' },
         { icon: 'phonelink', text: 'App downloads' },
