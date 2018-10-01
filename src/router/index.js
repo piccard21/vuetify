@@ -4,11 +4,13 @@ import Contacts from '@/components/Contacts'
 import Faq from '@/components/Faq'
 import Duplicates from '@/components/Duplicates'
 import Settings from '@/components/Settings'
+import Help from '@/components/Help'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    { path: '*', redirect: '/contacts' },
     {
       path: '/contacts',
       name: 'contacts',
@@ -28,6 +30,11 @@ export default new Router({
       path: '/settings',
       name: 'settings',
       component: Settings
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: Help
     }
   ],
   mode: 'history'
